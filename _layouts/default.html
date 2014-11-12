@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="all" />
+    <title>{{ page.title }}</title>
+  </head>
+
+  <body>
+    <header>
+      <h1><abbr>PSL</abbr>Philly Startup Leaders</h1>
+
+      <nav class="social">
+        <a href="#" class="linked-in">Linked In</a>
+        <a href="#" class="twitter">Twitter</a>
+      </nav>
+
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#">About PSL</a>
+            <ul>
+              <li><a href="">Manifesto</a></li>
+              <li><a href="">Leadership</a></li>
+              <li><a href="">Sponsorship </a></li>
+              <li><a href="">Values</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Philly Tech Info</a>
+            <ul>
+              <li><a href="">Resources</a></li>
+              <li><a href="">Events</a></li>
+              <li><a href="">Coworking</a></li>
+              <li><a href="">Startups</a></li>
+              <li><a href="">Investors</a></li>
+              <li><a href="">Jobs</a></li>
+              <li><a href="">Incubators &amp; Accelerators</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Listserv</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <header>
+        <h1>{{ page.title }}</h1>
+
+        {% if page.sub-title %}
+          <h2>{{ page.sub-title }}</h2>
+        {% endif %}
+      </header>
+
+      <section class="main-content">
+        {{ content }}
+      </section>
+
+      <footer>
+        <article>
+          <h1>Site design &amp; development by</h1>
+          <h2>thoughtbot</h2>
+          <p>Our clients hire us to design and build their products. We focus on user outcomes and simplicity. We write code for iOS, Android, and the web. <a href="#">Learn more about thoughtbot</a></p>
+        </article>
+
+        <section>
+          <h1><span>PSL</span>Philly Startup Leaders</h1>
+          <p>This site and it’s code are open source and licenced under MIT license. <a href="https://github.com/thoughtbot/psl">View the source</a>.</p>
+        </section>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="#">About PSL</a>
+              <ul>
+                <li><a href="">Manifesto</a></li>
+                <li><a href="">Leadership</a></li>
+                <li><a href="">Sponsorship </a></li>
+                <li><a href="">Values</a></li>
+                <li><a href="">Blog</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Philly Tech Info</a>
+              <ul>
+                <li><a href="">Resources</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Coworking</a></li>
+                <li><a href="">Startups</a></li>
+                <li><a href="">Investors</a></li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">Incubators &amp; Accelerators</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">Listserv</a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
+  </body>
+</html>
