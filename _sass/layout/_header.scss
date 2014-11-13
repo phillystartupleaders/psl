@@ -48,10 +48,6 @@
   float: right;
   font-size: em(14);
 
-  span {
-    display: none;
-  }
-
   &:after {
     @include size(0.3em);
     background: $dark-brown;
@@ -59,6 +55,10 @@
     content: "";
     display: inline-block;
     margin: 0 1em;
+  }
+
+  span {
+    display: none;
   }
 }
 
