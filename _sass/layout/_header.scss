@@ -12,27 +12,16 @@
     }
   }
 
-  h1 {
+  .logo {
     @include position(relative, -0.25em null null nul);
     float: left;
-    font-family: $base-font-family;
-    font-size: 1em;
-    font-weight: normal;
     padding: 1.5em 2em;
-
-    abbr {
-      @include position(relative, null null -2px null);
-      color: $base-accent-color;
-      font-family: $header-font-family;
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-right: 0.25em;
-    }
   }
 }
 
 %navigation-link {
   a {
+    font-family: $header-font-family;
     display: inline-block;
     padding: em(28, 14) em(16, 14);
 
@@ -49,6 +38,7 @@
   font-size: em(14);
 
   &:after {
+    @include position(relative, -0.25em null null null);
     @include size(0.3em);
     background: $dark-brown;
     border-radius: 50%;

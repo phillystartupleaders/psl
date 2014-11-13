@@ -5,7 +5,6 @@
   h1 {
     $hero-line-padding: 0.5em;
     color: white;
-    font-family: $base-font-family;
     font-size: em(28);
     font-weight: normal;
     margin-left: 0.5em;
@@ -24,6 +23,7 @@
     background-color: $secondary-background-color;
     color: white;
     display: inline-block;
+    font-family: $base-font-family;
     font-size: 1em;
     max-width: flex-grid(6);
     padding: 1em;

@@ -1,8 +1,8 @@
 // Typography
 $sans-serif: "ff-meta-web-pro", $helvetica;
 $serif: "droid-serif", $georgia;
-$base-font-family: $serif;
-$header-font-family: $sans-serif;
+$base-font-family: $sans-serif;
+$header-font-family: $serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -32,6 +32,7 @@ $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 $dark-brown: #3C3A30;
+$tan: #DAD8CA;
 
 // Background Color
 $base-background-color: white;
@@ -40,6 +41,7 @@ $secondary-background-color: rgba($dark-brown, 0.75);
 // Font Colors
 $base-font-color: $dark-gray;
 $base-accent-color: $green;
+$footer-font-color: $tan;
 
 // Link Colors
 $base-link-color: $base-accent-color;

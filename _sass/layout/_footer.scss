@@ -1,6 +1,80 @@
 footer {
+  @include clearfix;
   background-color: $secondary-background-color;
-  color: white;
+  color: $footer-font-color;
   margin-bottom: 3em;
-  padding: 4em;
+  padding: 4em 8em;
+}
+
+.thoughtbot {
+  @include clearfix;
+  border-bottom: 1px solid lighten($dark-brown, 10);
+  margin-bottom: 4em;
+  padding-bottom: 4em;
+
+  h1 {
+    @extend %content-title;
+    color: $base-accent-color;
+  }
+
+  h2 {
+    @extend %content-subtitle;
+    color: white;
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+  }
+
+  svg {
+    @include size(8em);
+    float: left;
+    margin-right: 1.5em;
+  }
+
+  p {
+    max-width: em(600);
+  }
+}
+
+.logo-wrapper {
+  @include span-columns(4);
+
+  .logo {
+    color: white;
+  }
+
+  p {
+    margin-top: 1em;
+  }
+}
+
+.footer-navigation {
+  @include shift(2);
+  @include span-columns(6);
+  margin-top: 3em;
+
+  h3 {
+    font-size: em(15);
+    font-weight: normal;
+    margin-bottom: 0.5em;
+
+    a {
+      color: white;
+
+      &:hover {
+        color: rgba(white, 0.8);
+      }
+    }
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  .group {
+    @include span-columns(2 6);
+  }
+
+  .twitter {
+    margin-top: 2em;
+  }
 }

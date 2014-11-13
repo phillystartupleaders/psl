@@ -12,7 +12,7 @@
 
   <body>
     <header class="main-header">
-      <h1><abbr>PSL</abbr>Philly Startup Leaders</h1>
+      <h1 class="logo"><abbr>PSL</abbr>Philly Startup Leaders</h1>
 
       <nav class="main-navigation">
         <ul>
@@ -70,21 +70,24 @@
       </section>
 
       <footer>
-        <article>
+        <article class="thoughtbot">
           <h1>Site design &amp; development by</h1>
+          {% include thoughtbot.svg %}
           <h2>thoughtbot</h2>
           <p>Our clients hire us to design and build their products. We focus on user outcomes and simplicity. We write code for iOS, Android, and the web. <a href="#">Learn more about thoughtbot</a></p>
         </article>
 
-        <section>
-          <h1><span>PSL</span>Philly Startup Leaders</h1>
+        <section class="logo-wrapper">
+          <h1 class="logo"><abbr>PSL</abbr>Philly Startup Leaders</h1>
           <p>This site and it’s code are open source and licenced under MIT license. <a href="https://github.com/thoughtbot/psl">View the source</a>.</p>
         </section>
 
-        <nav>
+        <nav class="footer-navigation">
           <ul>
-            <li>
-              <a href="#">About PSL</a>
+            <li class="group">
+              <h3>
+                <a href="#">About PSL</a>
+              </h3>
               <ul>
                 <li><a href="">Manifesto</a></li>
                 <li><a href="">Leadership</a></li>
@@ -93,8 +96,11 @@
                 <li><a href="">Blog</a></li>
               </ul>
             </li>
-            <li>
-              <a href="#">Philly Tech Info</a>
+
+            <li class="group">
+              <h3>
+                <a href="#">Philly Tech Info</a>
+              </h3>
               <ul>
                 <li><a href="">Resources</a></li>
                 <li><a href="">Events</a></li>
@@ -105,8 +111,14 @@
                 <li><a href="">Incubators &amp; Accelerators</a></li>
               </ul>
             </li>
-            <li>
-              <a href="">Listserv</a>
+
+            <li class="group">
+              <h3>
+                <a href="">Listserv</a>
+              </h3>
+              <h3 class="twitter">
+                <a href="https://twitter.com/startupleaders">Follow us on Twitter</a>
+              </h3>
             </li>
           </ul>
         </nav>
