@@ -48,13 +48,17 @@
   float: right;
   font-size: em(14);
 
+  span {
+    display: none;
+  }
+
   &:after {
     @include size(0.3em);
     background: $dark-brown;
     border-radius: 50%;
     content: "";
     display: inline-block;
-    margin-right: 1em;
+    margin: 0 1em;
   }
 }
 
