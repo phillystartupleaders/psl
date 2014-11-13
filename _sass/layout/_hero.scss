@@ -1,0 +1,31 @@
+.hero {
+  padding-bottom: 36vh;
+  padding-top: 10vh;
+
+  h1 {
+    $hero-line-padding: 0.5em;
+    color: white;
+    font-family: $base-font-family;
+    font-size: em(28);
+    font-weight: normal;
+    margin-left: 0.5em;
+
+    span {
+      $hero-header-background: $base-accent-color;
+      @include prefixer(box-decoration-break, clone, webkit moz o spec);
+      background-color: $hero-header-background;
+      box-shadow: $hero-line-padding 0 0 $hero-header-background, (-$hero-line-padding) 0 0 $hero-header-background;
+      line-height: 1.9em;
+      padding: 0.4em 0;
+    }
+  }
+
+  h2 {
+    background-color: $secondary-background-color;
+    color: white;
+    display: inline-block;
+    font-size: 1em;
+    max-width: flex-grid(6);
+    padding: 1em;
+  }
+}

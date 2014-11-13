@@ -6,18 +6,15 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="all" />
     <title>{{ page.title }}</title>
+    <script src="//use.typekit.net/myb4xsg.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
 
   <body>
-    <header>
+    <header class="main-header">
       <h1><abbr>PSL</abbr>Philly Startup Leaders</h1>
 
-      <nav class="social">
-        <a href="#" class="linked-in">Linked In</a>
-        <a href="#" class="twitter">Twitter</a>
-      </nav>
-
-      <nav>
+      <nav class="main-navigation">
         <ul>
           <li class="dropdown">
             <a href="#">About PSL</a>
@@ -46,11 +43,16 @@
           </li>
         </ul>
       </nav>
+
+      <nav class="social">
+        <a href="#" class="linked-in">Linked In</a>
+        <a href="#" class="twitter">Twitter</a>
+      </nav>
     </header>
 
-    <section>
-      <header>
-        <h1>{{ page.title }}</h1>
+    <section class="wrapper">
+      <header class="hero">
+        <h1><span>{{ page.title }}</span></h1>
 
         {% if page.sub-title %}
           <h2>{{ page.sub-title }}</h2>

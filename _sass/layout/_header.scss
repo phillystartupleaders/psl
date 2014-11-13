@@ -1,0 +1,80 @@
+.main-header {
+  @include outer-container;
+  background-color: $secondary-background-color;
+  color: white;
+  margin-top: 2em;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: rgba(white, 0.8);
+    }
+  }
+
+  h1 {
+    @include position(relative, -0.25em null null nul);
+    float: left;
+    font-family: $base-font-family;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 1.5em 2em;
+
+    abbr {
+      @include position(relative, null null -2px null);
+      color: $base-accent-color;
+      font-family: $header-font-family;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-right: 0.25em;
+    }
+  }
+}
+
+%navigation-link {
+  a {
+    display: inline-block;
+    padding: em(28, 14) em(16, 14);
+
+    &:hover {
+      background-color: $dark-brown;
+    }
+  }
+}
+
+.social {
+  @include row;
+  @extend %navigation-link;
+  float: right;
+  font-size: em(14);
+
+  &:after {
+    @include size(0.3em);
+    background: $dark-brown;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
+.main-navigation {
+  @include row;
+  @extend %navigation-link;
+  float: right;
+  font-size: em(14);
+
+  li {
+    display: inline-block;
+
+    &:last-child {
+      a {
+        padding-right: em(32, 14);
+      }
+    }
+  }
+
+  .dropdown ul {
+    display: none;
+  }
+}
