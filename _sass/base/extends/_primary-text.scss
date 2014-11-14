@@ -1,0 +1,6 @@
+%primary-text {
+  @extend %content-subtitle;
+  color: darken($main-font-color, 20j);
+  font-family: $header-font-family;
+  line-height: 1.7;
+}

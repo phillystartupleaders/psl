@@ -26,7 +26,7 @@
     padding: em(28, 14) em(16, 14);
 
     &:hover {
-      background-color: $dark-brown;
+      color: $base-accent-color;
     }
   }
 }
@@ -47,6 +47,14 @@
     margin: 0 1em;
   }
 
+  a:hover svg {
+    fill: $base-accent-color;
+  }
+
+  svg {
+    fill: white;
+  }
+
   span {
     display: none;
   }
@@ -58,6 +66,13 @@
   float: right;
   font-size: em(14);
 
+  a {
+    &:hover,
+    &:focus {
+      background-color: $dark-brown;
+    }
+  }
+
   li {
     display: inline-block;
 
@@ -66,9 +81,5 @@
         padding-right: em(32, 14);
       }
     }
-  }
-
-  .dropdown ul {
-    display: none;
   }
 }

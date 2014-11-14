@@ -1,0 +1,11 @@
+.coworking {
+  @extend %list;
+
+  h2 {
+    @extend %title;
+  }
+
+  h3 {
+    @extend %text;
+  }
+}

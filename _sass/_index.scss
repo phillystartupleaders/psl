@@ -1,0 +1,122 @@
+.manifesto-introduction {
+  p {
+    @extend %primary-text;
+    @include span-columns(6);
+  }
+}
+
+.events {
+  h3 {
+    color: $main-font-color;
+    font-family: $base-font-family;
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  ul {
+    @include row(table);
+  }
+
+  li {
+    @include span-columns(4, table);
+    padding: 2em;
+    text-align: center;
+    vertical-align: middle;
+
+    a {
+      display: inline-block;
+      margin-top: 1em;
+    }
+  }
+
+  .icon {
+    margin-bottom: 1em;
+
+    svg {
+      fill: $tan;
+    }
+  }
+
+  .next-event {
+    background-color: $base-accent-color;
+    color: white;
+    vertical-align: top;
+
+    &:before {
+      content: "Next Event";
+      display: block;
+      font-size: em(14);
+      font-weight: bold;
+      margin-bottom: 2em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: rgba(white, 0.7);
+    }
+
+    a {
+      @extend %inverse-button;
+    }
+
+   .icon svg {
+      fill: darken($base-accent-color, 20);
+    }
+  }
+}
+
+.testimonial {
+  background-color: $base-border-color;
+  margin-top: 2em;
+  padding: 1em 2em;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.programs {
+  ul {
+    @include row;
+  }
+
+  li {
+    @include omega(2n);
+    @include span-columns(6);
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 1em;
+    }
+  }
+
+  p {
+    color: $main-font-color;
+  }
+
+  .icon {
+    @include span-columns(1 6);
+    margin-top: 1em;
+  }
+
+  .program-info {
+    @include span-columns(5 6);
+  }
+}
+
+.listserv {
+  .icon {
+    @include span-columns(1);
+    margin-top: 0.5em;
+  }
+
+  h2 {
+    display: inline-block;
+    margin-right: 2em;
+  }
+
+  a {
+    @extend %button;
+    display: inline-block;
+  }
+}

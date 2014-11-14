@@ -1,0 +1,35 @@
+.dropdown {
+  position: relative;
+
+  > a {
+    margin-bottom: 1px;
+  }
+
+  &:hover {
+    > a {
+      background-color: $dark-brown;
+    }
+
+    ul {
+      display: block;
+    }
+  }
+
+  svg {
+    @include position(relative, -1px null null null);
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+
+  ul {
+    @include position(absolute, null null null null);
+    background-color: $secondary-background-color;
+    display: none;
+    width: em(250);
+  }
+
+  li,
+  a {
+    display: block;
+  }
+}

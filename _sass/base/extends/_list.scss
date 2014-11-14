@@ -1,0 +1,23 @@
+%list {
+  @include row;
+
+  li {
+    @include omega(3n);
+    @include span-columns(4);
+    border: $base-border;
+    margin-bottom: 2em;
+    padding: 2em;
+    text-align: center;
+
+    %title {
+      @extend %content-subtitle;
+    }
+
+    %text {
+      color: $main-font-color;
+      font-family: $base-font-family;
+      font-size: 1em;
+      font-weight: normal;
+    }
+  }
+}

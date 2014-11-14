@@ -33,6 +33,7 @@ $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 $dark-brown: #3C3A30;
 $tan: #DAD8CA;
+$light-tan: #F1F0EC;
 
 // Background Color
 $base-background-color: white;
@@ -42,6 +43,7 @@ $secondary-background-color: rgba($dark-brown, 0.75);
 $base-font-color: $dark-gray;
 $base-accent-color: $green;
 $footer-font-color: $tan;
+$main-font-color: #A9A9A9;
 
 // Link Colors
 $base-link-color: $base-accent-color;
@@ -56,7 +58,7 @@ $notice-color: lighten($base-accent-color, 40);
 $success-color: $light-green;
 
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: $light-tan;
 $base-border: 1px solid $base-border-color;
 
 // Forms

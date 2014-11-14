@@ -1,0 +1,16 @@
+.resources {
+  @extend %list;
+
+  a {
+    h2 {
+      @extend %title;
+    }
+
+    &:after {
+      @extend %text;
+      @include ellipsis(100%);
+      content: attr(href);
+      display: block;
+    }
+  }
+}

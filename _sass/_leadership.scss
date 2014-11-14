@@ -1,0 +1,38 @@
+.leadership {
+  @include clearfix;
+
+  li {
+    @include span-columns(6);
+    @include omega(2n);
+    margin-bottom: 3em;
+  }
+
+  .photo {
+    img {
+      @include size(100% 13em);
+      background-color: gray;
+      margin-bottom: 1em;
+    }
+  }
+
+  header {
+    margin-bottom: 2em;
+  }
+
+  h2 {
+    @extend %content-title;
+    color: $base-accent-color;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    @extend %content-subtitle;
+  }
+
+  h4 {
+    color: $main-font-color;
+    font-family: $base-font-family;
+    font-size: 1em;
+    font-weight: normal;
+  }
+}

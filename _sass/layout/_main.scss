@@ -1,4 +1,24 @@
 .main-content {
   background: $base-background-color;
   padding: 4em 8em;
+
+  article {
+    @include row;
+    border-top: $base-border;
+    padding: 3em 0;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    h1 {
+      @extend %content-title;
+      color: $base-accent-color;
+    }
+
+    h2 {
+      @extend %content-subtitle;
+    }
+  }
 }

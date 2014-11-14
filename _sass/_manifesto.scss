@@ -1,0 +1,13 @@
+.manifesto {
+  margin: 0 auto;
+  max-width: em(700);
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  p {
+    @extend %primary-text;
+  }
+}
+

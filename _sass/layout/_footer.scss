@@ -60,7 +60,8 @@ footer {
     a {
       color: white;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: rgba(white, 0.8);
       }
     }
