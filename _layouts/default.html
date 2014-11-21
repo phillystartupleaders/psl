@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
+    <link rel="shortcut icon" href="/psl/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/psl/stylesheets/style.css" type="text/css" media="all" />
     <title>{{ page.title }}</title>
     <script src="//use.typekit.net/myb4xsg.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -13,7 +13,7 @@
   <body>
     <header class="main-header">
       <h1 class="logo">
-        <a href="/">
+        <a href="/psl">
           <abbr>PSL</abbr>Philly Startup Leaders
         </a>
       </h1>
@@ -21,13 +21,15 @@
       <nav class="main-navigation">
         <ul>
           <li class="dropdown">
-            <a href="/about-psl">
+            <a href="#">
               About PSL
               {% include down-arrow.svg %}
             </a>
             <ul>
-              <li><a href="/manifesto">Manifesto</a></li>
-              <li><a href="/leadership">Leadership</a></li>
+              <li><a href="/psl/about-psl">History</a></li>
+              <li><a href="/psl/manifesto">Manifesto</a></li>
+              <li><a href="/psl/leadership">Leadership</a></li>
+              <li><a href="/psl/sponsors">Sponsors</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -36,11 +38,12 @@
               {% include down-arrow.svg %}
             </a>
             <ul>
-              <li><a href="/resources">Resources</a></li>
-              <li><a href="/coworking">Coworking</a></li>
+              <li><a href="/psl/resources">Resources</a></li>
+              <li><a href="/psl/coworking">Coworking</a></li>
               <li><a href="http://nextplex.com/philadelphia-pa/resources/funding-sources" class="external">Investors</a></li>
+              <li><a href="https://www.startupdigest.com/digests/philadelphia">Philly Events</a></li>
               <li><a href="http://technical.ly/philly/jobs/" class="external">Jobs</a></li>
-              <li><a href="/incubators-accelerators">Incubators &amp; Accelerators</a></li>
+              <li><a href="/psl/incubators-accelerators">Incubators &amp; Accelerators</a></li>
             </ul>
           </li>
           <li>
@@ -50,10 +53,6 @@
       </nav>
 
       <nav class="social">
-        <a href="https://www.linkedin.com/company/philly-startup-leaders" class="linked-in">
-          {% include linked-in.svg %}
-          <span>Linked Info</span>
-        </a>
         <a href="https://twitter.com/startupleaders" class="#twitter">
           {% include twitter.svg %}
           <span>Twitter</span>
@@ -78,8 +77,8 @@
         <article class="thoughtbot">
           <h1>Site design &amp; development by</h1>
           {% include thoughtbot.svg %}
-          <h2>thoughtbot</h2>
-          <p>Our clients hire us to design and build their products. We focus on user outcomes and simplicity. We write code for iOS, Android, and the web. <a href="#">Learn more about thoughtbot</a></p>
+          <h2><a href="http://thoughtbot.com">thoughtbot</a></h2>
+          <p>Our clients hire us to design and build their products. We focus on user outcomes and simplicity. We write code for iOS, Android, and the web. <a href="http://thoughtbot.com">Learn more about thoughtbot</a></p>
         </article>
 
         <section class="logo-wrapper">
@@ -90,35 +89,40 @@
         <nav class="footer-navigation">
           <ul>
             <li class="group">
-              <h3>
-                <a href="/about-psl">About PSL</a>
-              </h3>
+              <h3>About PSL</h3>
               <ul>
-                <li><a href="/manifesto">Manifesto</a></li>
-                <li><a href="/leadership">Leadership</a></li>
+                <li><a href="/psl/about-psl">History</a></li>
+                <li><a href="/psl/manifesto">Manifesto</a></li>
+                <li><a href="/psl/leadership">Leadership</a></li>
+                <li><a href="/psl/sponsors">Sponsors</a></li>
               </ul>
             </li>
 
             <li class="group">
-              <h3>
-                <a href="#">Philly Tech Info</a>
-              </h3>
+              <h3>Philly Tech Info</h3>
               <ul>
-                <li><a href="/resources">Resources</a></li>
-                <li><a href="/coworking">Coworking</a></li>
+                <li><a href="/psl/resources">Resources</a></li>
+                <li><a href="/psl/coworking">Coworking</a></li>
                 <li><a href="http://nextplex.com/philadelphia-pa/resources/funding-sources" class="external">Investors</a></li>
+                <li><a href="https://www.startupdigest.com/digests/philadelphia">Philly Events</a></li>
                 <li><a href="http://technical.ly/philly/jobs/" class="external">Jobs</a></li>
-                <li><a href="/incubators-accelerators">Incubators &amp; Accelerators</a></li>
+                <li><a href="/psl/incubators-accelerators">Incubators &amp; Accelerators</a></li>
               </ul>
             </li>
 
             <li class="group">
-              <h3>
-                <a href="http://phillystartupleaders.org/mailman/listinfo/talk_phillystartupleaders.org">Listserv</a>
-              </h3>
-              <h3 class="twitter">
-                <a href="https://twitter.com/startupleaders">Follow us on Twitter</a>
-              </h3>
+              <h3>Get in Contact</h3>
+              <ul>
+                <li>
+                  <a href="http://phillystartupleaders.org/mailman/listinfo/talk_phillystartupleaders.org">Listserv</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/startupleaders">Twitter</a>
+                </li>
+                <li>
+                  <a href="mailto:kyle@thoughtbot.com">Email</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>

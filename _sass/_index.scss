@@ -65,16 +65,6 @@
   }
 }
 
-.testimonial {
-  background-color: $base-border-color;
-  margin-top: 2em;
-  padding: 1em 2em;
-
-  h2 {
-    margin: 0;
-  }
-}
-
 .programs {
   ul {
     @include row;

@@ -69,7 +69,7 @@
   a {
     &:hover,
     &:focus {
-      background-color: $dark-brown;
+      background-color: rgba($dark-brown, 0.8);
     }
   }
 

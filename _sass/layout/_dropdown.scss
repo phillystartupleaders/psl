@@ -25,7 +25,7 @@
     @include position(absolute, null null null null);
     background-color: $secondary-background-color;
     display: none;
-    width: em(250);
+    width: 16em;
   }
 
   li,
