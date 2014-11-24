@@ -1,0 +1,12 @@
+.external {
+  &:after {
+    @include size(1em);
+    background-image: url("/images/external.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+}

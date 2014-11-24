@@ -76,14 +76,25 @@
 
     &:nth-child(1),
     &:nth-child(2) {
-      margin-bottom: 1em;
+      margin-bottom: 3em;
     }
+  }
+
+  h2 {
+    color: $base-font-color;
   }
 
   p {
     color: $main-font-color;
   }
 
+  a {
+    &:hover {
+      h2 {
+        color: $base-accent-color;
+      }
+    }
+  }
   .icon {
     @include span-columns(1 6);
     margin-top: 1em;

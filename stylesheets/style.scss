@@ -9,11 +9,13 @@
 
 @import "layout/footer";
 @import "layout/header";
-@import "layout/dropdown";
 @import "layout/hero";
 @import "layout/logo";
 @import "layout/main";
 @import "layout/wrapper";
+
+@import "components/external";
+@import "components/dropdown";
 
 @import "coworking";
 @import "incubators-accelerators";
