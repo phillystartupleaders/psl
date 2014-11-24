@@ -12,6 +12,22 @@
       border-top: 0;
     }
 
+    &.featured {
+      background-color: $base-border-color;
+      border: none;
+      margin: -4em -8em 0;
+      padding: 4em 8em;
+
+      h1 {
+        margin-bottom: 1em;
+      }
+
+      .main-action {
+        @extend %button;
+        display: inline-block;
+      }
+    }
+
     h1 {
       @extend %content-title;
       color: $base-accent-color;

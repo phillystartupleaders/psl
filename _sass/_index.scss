@@ -96,17 +96,13 @@
 
 .listserv {
   .icon {
-    @include span-columns(1);
+    display: inline-block;
+    margin-right: 1.5em;
     margin-top: 0.5em;
   }
 
   h2 {
     display: inline-block;
     margin-right: 2em;
-  }
-
-  a {
-    @extend %button;
-    display: inline-block;
   }
 }

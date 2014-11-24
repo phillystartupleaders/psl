@@ -1,13 +1,28 @@
 .logo {
   font-size: 1em;
-  font-weight: normal;
 
-  abbr {
-    @include position(relative, null null -2px null);
-    color: $base-accent-color;
-    font-family: $base-font-family;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-right: 0.25em;
+  a {
+    span {
+      color: white;
+
+      &:before {
+        @include size(2px 30px);
+        background-color: rgba(white, 0.5);
+        content: "";
+        display: inline-block;
+        margin: 0 0.75em -8px 0.25em;
+      }
+    }
+
+    abbr {
+      @include hide-text();
+      @include size(4em 1.65em);
+      display: inline-block;
+      background-image: url("/images/psl-short.svg");
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-bottom: -6px;
+    }
   }
 }

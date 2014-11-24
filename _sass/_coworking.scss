@@ -8,4 +8,14 @@
   h3 {
     @extend %text;
   }
+
+  .image {
+    display: block;
+    margin: 2em -2em -2em;
+
+    img {
+      vertical-align: top;
+      width: 100%;
+    }
+  }
 }

@@ -13,9 +13,8 @@
   }
 
   .logo {
-    @include position(relative, -0.25em null null nul);
     float: left;
-    padding: 1.5em 2em;
+    padding: 1.5em 2em 0;
   }
 }
 
@@ -23,7 +22,7 @@
   a {
     font-family: $header-font-family;
     display: inline-block;
-    padding: em(28, 14) em(16, 14);
+    padding: em(28, 15) em(16, 15);
 
     &:hover {
       color: $base-accent-color;
@@ -35,7 +34,7 @@
   @include row;
   @extend %navigation-link;
   float: right;
-  font-size: em(14);
+  font-size: em(15);
 
   &:after {
     @include position(relative, -0.25em null null null);
@@ -64,9 +63,11 @@
   @include row;
   @extend %navigation-link;
   float: right;
-  font-size: em(14);
+  font-size: em(15);
 
   a {
+    font-weight: bold;
+
     &:hover,
     &:focus {
       background-color: rgba($dark-brown, 0.8);
@@ -78,7 +79,7 @@
 
     &:last-child {
       a {
-        padding-right: em(32, 14);
+        padding-right: em(32, 15);
       }
     }
   }

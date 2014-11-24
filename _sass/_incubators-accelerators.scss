@@ -1,0 +1,7 @@
+.incubators-accelerators {
+  @extend %list;
+
+  h2 {
+    @extend %title;
+  }
+}

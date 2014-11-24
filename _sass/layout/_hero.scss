@@ -7,6 +7,7 @@
     color: white;
     font-size: em(28);
     font-weight: normal;
+    margin-bottom: 0.2em;
     margin-left: 0.5em;
 
     span {
@@ -26,7 +27,6 @@
     font-family: $base-font-family;
     font-size: 1em;
     font-weight: normal;
-    max-width: flex-grid(6);
     padding: 1em;
   }
 }
