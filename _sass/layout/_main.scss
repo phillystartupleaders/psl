@@ -22,9 +22,17 @@
         margin-bottom: 1em;
       }
 
+      h2 {
+        float: left;
+      }
+
       .main-action {
         @extend %button;
         display: inline-block;
+        float: right;
+        margin-top: -2em;
+        padding: 1.25em 3em;
+        vertical-align: bottom;
       }
     }
 

@@ -9,8 +9,6 @@
 
   .photo {
     img {
-      @include size(100% 13em);
-      background-color: gray;
       margin-bottom: 1em;
     }
   }
@@ -34,5 +32,25 @@
     font-family: $base-font-family;
     font-size: 1em;
     font-weight: normal;
+  }
+}
+
+.volunteers {
+  @include row;
+  border-top: 1px solid $base-border-color;
+  padding-top: 4em;
+
+  li {
+    @include span-columns(2.4);
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-family: $base-font-family;
+    font-size: 1em;
+    margin-bottom: 0.25em;
   }
 }
