@@ -1,7 +1,10 @@
 .manifesto-introduction {
   p {
     @extend %primary-text;
-    @include span-columns(6);
+
+    @include media(em(900)) {
+      @include span-columns(6);
+    }
   }
 }
 
@@ -14,14 +17,19 @@
   }
 
   ul {
-    @include row(table);
+    @include media(em(900)) {
+      @include row(table);
+    }
   }
 
   li {
-    @include span-columns(4, table);
     padding: 2em;
     text-align: center;
-    vertical-align: middle;
+
+    @include media(em(700)) {
+      @include span-columns(4, table);
+      vertical-align: middle;
+    }
 
     a {
       display: inline-block;
@@ -71,12 +79,27 @@
   }
 
   li {
-    @include omega(2n);
-    @include span-columns(6);
+    @include row;
+    margin-bottom: 3em;
 
-    &:nth-child(1),
-    &:nth-child(2) {
-      margin-bottom: 3em;
+    @include media(em(700)) {
+      @include omega(2n);
+      @include span-columns(6);
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  svg {
+    @include media(max-width $main-content-medium) {
+      width: 32px;
+    }
+
+    @include media(min-width em(700) max-width em(900)) {
+      width: 32px;
     }
   }
 
@@ -95,9 +118,13 @@
       }
     }
   }
+
   .icon {
     @include span-columns(1 6);
-    margin-top: 1em;
+
+    @include media(em(900)) {
+      margin-top: 1em;
+    }
   }
 
   .program-info {

@@ -5,10 +5,14 @@
   h1 {
     $hero-line-padding: 0.5em;
     color: white;
-    font-size: em(28);
+    font-size: em(22);
     font-weight: normal;
     margin-bottom: 0.2em;
     margin-left: 0.5em;
+
+    @include media($main-content-medium) {
+      font-size: em(28);
+    }
 
     span {
       $hero-header-background: $base-accent-color;

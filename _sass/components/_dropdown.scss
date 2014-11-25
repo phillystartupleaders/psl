@@ -3,7 +3,7 @@
 
   &:hover {
     > a {
-      background-color: $dark-brown;
+      background-color: rgba($dark-brown, 0.8);
     }
 
     ul {

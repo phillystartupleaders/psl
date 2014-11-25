@@ -20,7 +20,18 @@
       </h1>
 
       <nav class="main-navigation">
-        <ul>
+        <a href="#" class="mobile-menu">
+          {% include menu.svg %}
+          Menu
+        </a>
+
+        <ul class="navigation-list">
+          <li class="social">
+            <a href="https://twitter.com/startupleaders" class="#twitter">
+              {% include twitter.svg %}
+              <span>Twitter</span>
+            </a>
+          </li>
           <li class="dropdown">
             <a href="#">
               About PSL
@@ -51,13 +62,6 @@
             <a href="http://phillystartupleaders.org/mailman/listinfo/talk_phillystartupleaders.org">Listserv</a>
           </li>
         </ul>
-      </nav>
-
-      <nav class="social">
-        <a href="https://twitter.com/startupleaders" class="#twitter">
-          {% include twitter.svg %}
-          <span>Twitter</span>
-        </a>
       </nav>
     </header>
 
@@ -135,5 +139,7 @@
         </nav>
       </footer>
     </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/javascript/site.js"></script>
   </body>
 </html>

@@ -1,3 +1,7 @@
 .wrapper {
   @include outer-container;
+
+  @include media(em(600)) {
+    padding: 2em;
+  }
 }

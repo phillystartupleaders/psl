@@ -4,4 +4,12 @@
   h2 {
     @extend %title;
   }
+
+  li {
+    @extend %same-height;
+
+    @include media(em(600)) {
+      min-height: em(355);
+    }
+  }
 }

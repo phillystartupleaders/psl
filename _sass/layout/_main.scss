@@ -1,6 +1,14 @@
 .main-content {
   background: $base-background-color;
-  padding: 4em 8em;
+  padding: $container-padding-small;
+
+  @include media($main-content-medium) {
+    padding: $container-padding-medium;
+  }
+
+  @include media($main-content-large) {
+    padding: $container-padding-large;
+  }
 
   article {
     @include row;
@@ -15,24 +23,40 @@
     &.featured {
       background-color: $base-border-color;
       border: none;
-      margin: -4em -8em 0;
-      padding: 4em 8em;
+      margin: -2em -2em auto;
+      padding: $container-padding-small;
+
+      @include media($main-content-medium) {
+        margin: -4em -4em auto;
+        padding: $container-padding-medium;
+      }
+
+      @include media($main-content-large) {
+        margin: -4em -8em auto;
+        padding: $container-padding-large;
+      }
 
       h1 {
         margin-bottom: 1em;
       }
 
       h2 {
-        float: left;
+        @include media(em(1050)) {
+          float: left;
+        }
       }
 
       .main-action {
         @extend %button;
         display: inline-block;
-        float: right;
-        margin-top: -2em;
+        margin-top: 1em;
         padding: 1.25em 3em;
         vertical-align: bottom;
+
+        @include media(em(1050)) {
+          float: right;
+          margin-top: -2em;
+        }
       }
     }
 

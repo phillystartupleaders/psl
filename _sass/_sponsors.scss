@@ -1,5 +1,13 @@
 .current-sponsors {
   ul {
     @extend %list;
+
+    li {
+      @extend %same-height;
+
+      @include media(em(600)) {
+        min-height: em(335);
+      }
+    }
   }
 }

@@ -1,8 +1,19 @@
+$medium-header-break: em(850);
+
 .main-header {
   @include outer-container;
   background-color: $secondary-background-color;
   color: white;
   margin-top: 2em;
+  position: relative;
+
+  @include media(max-width $max-width) {
+    margin: 2em;
+  }
+
+  @include media($mobile-navigation) {
+    margin: 0;
+  }
 
   a {
     color: white;
@@ -15,60 +26,91 @@
   .logo {
     float: left;
     padding: 1.5em 2em 0;
-  }
-}
 
-%navigation-link {
-  a {
-    font-family: $header-font-family;
-    display: inline-block;
-    padding: em(28, 15) em(16, 15);
+    @include media(max-width $medium-header-break) {
+      padding: 1.5em 1em 0;
 
-    &:hover {
-      color: $base-accent-color;
+      span {
+        display: none;
+      }
     }
-  }
-}
-
-.social {
-  @include row;
-  @extend %navigation-link;
-  float: right;
-  font-size: em(15);
-
-  &:after {
-    @include position(relative, -0.25em null null null);
-    @include size(0.3em);
-    background: $dark-brown;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    margin: 0 1em;
-  }
-
-  a:hover svg {
-    fill: $base-accent-color;
-  }
-
-  svg {
-    fill: white;
-  }
-
-  span {
-    display: none;
   }
 }
 
 .main-navigation {
   @include row;
-  @extend %navigation-link;
   float: right;
   font-size: em(15);
 
+  .navigation-list {
+    @include media($mobile-navigation) {
+      @include position(absolute, null 0 null 0);
+      background-color: rgba($dark-brown, 0.9);
+      display: none;
+
+      li {
+        display: block;
+      }
+
+      a {
+        padding: 1.5em 2em;
+      }
+
+      .social {
+        display: none;
+      }
+
+      .dropdown {
+        &:hover > a {
+          background: none;
+        }
+
+        > a {
+          color: rgba(white, 0.8);
+          font-size: em(14);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+
+          svg {
+            display: none;
+          }
+        }
+
+        ul {
+          background: none;
+          display: block;
+          position: static;
+          width: auto;
+        }
+      }
+    }
+  }
+
   a {
+    font-family: $header-font-family;
+    display: inline-block;
+    padding: em(28, 15) em(16, 15);
+
     &:hover,
     &:focus {
       background-color: rgba($dark-brown, 0.8);
+      color: $base-accent-color;
+    }
+
+    &.mobile-menu {
+      display: none;
+
+      @include media($mobile-navigation) {
+        display: block;
+      }
+
+      svg {
+        @include size(1.2em);
+        display: inline-block;
+        fill: white;
+        margin-bottom: -3px;
+        margin-right: 0.5em;
+      }
     }
   }
 
@@ -80,5 +122,35 @@
         padding-right: em(32, 15);
       }
     }
+  }
+}
+
+.social {
+  &:after {
+    @include position(relative, -0.25em null null null);
+    @include size(0.3em);
+    background: $dark-brown;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    margin: 0 1em;
+  }
+
+  a {
+    &:hover {
+      background: none;
+
+      svg {
+        fill: $base-accent-color;
+      }
+    }
+  }
+
+  svg {
+    fill: white;
+  }
+
+  span {
+    display: none;
   }
 }

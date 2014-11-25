@@ -2,9 +2,12 @@
   @include clearfix;
 
   li {
-    @include span-columns(6);
-    @include omega(2n);
     margin-bottom: 3em;
+
+    @include media(em(750)) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
   }
 
   .photo {
@@ -41,7 +44,21 @@
   padding-top: 4em;
 
   li {
-    @include span-columns(2.4);
+    margin-bottom: 1em;
+
+    @include media(min-width em(350) max-width em(599)) {
+      @include omega(2n);
+      @include span-columns(6);
+    }
+
+    @include media(min-width em(600) max-width em(829)) {
+      @include omega(3n);
+      @include span-columns(4);
+    }
+
+    @include media(em(830)) {
+      @include span-columns(2.4);
+    }
   }
 
   p {
