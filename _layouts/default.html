@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="all" />
+    <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/style.css" type="text/css" media="all" />
     <title>{{ page.title }}</title>
     <script src="//use.typekit.net/myb4xsg.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -13,7 +13,7 @@
   <body>
     <header class="main-header">
       <h1 class="logo">
-        <a href="/">
+        <a href="{{ site.baseurl }}/">
           <abbr>PSL</abbr>
           <span>Philly Startup Leaders</span>
         </a>
@@ -27,9 +27,9 @@
               {% include down-arrow.svg %}
             </a>
             <ul>
-              <li><a href="/about-psl">History</a></li>
-              <li><a href="/manifesto">Manifesto</a></li>
-              <li><a href="/leadership">Leadership</a></li>
+              <li><a href="{{ site.baseurl }}/about-psl">History</a></li>
+              <li><a href="{{ site.baseurl }}/manifesto">Manifesto</a></li>
+              <li><a href="{{ site.baseurl }}/leadership">Leadership</a></li>
               <li><a href="/sponsors">Sponsors</a></li>
             </ul>
           </li>
@@ -39,12 +39,12 @@
               {% include down-arrow.svg %}
             </a>
             <ul>
-              <li><a href="/resources">Resources</a></li>
-              <li><a href="/coworking">Coworking</a></li>
+              <li><a href="{{ site.baseurl }}/resources">Resources</a></li>
+              <li><a href="{{ site.baseurl }}/coworking">Coworking</a></li>
               <li><a href="http://nextplex.com/philadelphia-pa/resources/funding-sources" class="external">Investors</a></li>
               <li><a href="https://www.startupdigest.com/digests/philadelphia" class="external">Philly Events</a></li>
               <li><a href="http://technical.ly/philly/jobs/" class="external">Jobs</a></li>
-              <li><a href="/incubators-accelerators">Incubators &amp; Accelerators</a></li>
+              <li><a href="{{ site.baseurl }}/incubators-accelerators">Incubators &amp; Accelerators</a></li>
             </ul>
           </li>
           <li>
@@ -84,7 +84,7 @@
 
         <section class="logo-wrapper">
           <h1 class="logo">
-            <a href="/">
+            <a href="{{ site.baseurl }}/">
               <abbr class="short">PSL</abbr>
               <span class="full">Philly Startup Leaders</span>
             </a>
@@ -98,22 +98,22 @@
             <li class="group">
               <h3>About PSL</h3>
               <ul>
-                <li><a href="/psl/about-psl">History</a></li>
-                <li><a href="/psl/manifesto">Manifesto</a></li>
-                <li><a href="/psl/leadership">Leadership</a></li>
-                <li><a href="/psl/sponsors">Sponsors</a></li>
+                <li><a href="{{ site.baseurl }}/about-psl">History</a></li>
+                <li><a href="{{ site.baseurl }}/manifesto">Manifesto</a></li>
+                <li><a href="{{ site.baseurl }}/leadership">Leadership</a></li>
+                <li><a href="{{ site.baseurl }}/sponsors">Sponsors</a></li>
               </ul>
             </li>
 
             <li class="group">
               <h3>Philly Tech Info</h3>
               <ul>
-                <li><a href="/psl/resources">Resources</a></li>
-                <li><a href="/psl/coworking">Coworking</a></li>
+                <li><a href="{{ site.baseurl }}/resources">Resources</a></li>
+                <li><a href="{{ site.baseurl }}/coworking">Coworking</a></li>
                 <li><a href="http://nextplex.com/philadelphia-pa/resources/funding-sources" class="external">Investors</a></li>
                 <li><a href="https://www.startupdigest.com/digests/philadelphia" class="external">Philly Events</a></li>
                 <li><a href="http://technical.ly/philly/jobs/" class="external">Jobs</a></li>
-                <li><a href="/psl/incubators-accelerators">Incubators &amp; Accelerators</a></li>
+                <li><a href="{{ site.baseurl }}/incubators-accelerators">Incubators &amp; Accelerators</a></li>
               </ul>
             </li>
 

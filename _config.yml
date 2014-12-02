@@ -1,6 +1,6 @@
 name: Start.Stay.Grow. Marketing Site
 url: http://startstaygrow.org
-baseurl: http://thoughtbot.github.io/psl/
+baseurl: /psl
 
 sass:
   sass_dir: _sass
