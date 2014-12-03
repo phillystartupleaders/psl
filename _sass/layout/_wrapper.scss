@@ -1,7 +1,7 @@
 .wrapper {
   @include outer-container;
 
-  @include media(em(600)) {
+  @include media(min-width em(600) max-width $max-width) {
     padding: 2em;
   }
 }
