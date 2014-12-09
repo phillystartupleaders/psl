@@ -1,6 +1,9 @@
 .hero {
   padding-bottom: 48vh;
   padding-top: 10vh;
+  position: relative;
+  pointer-events: none;
+  z-index: 0;
 
   h1 {
     $hero-line-padding: 0.5em;

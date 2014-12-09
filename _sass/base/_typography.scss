@@ -4,8 +4,13 @@ html {
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%; // Part of a hack to make background work for ios
-  overflow: hidden; // Part of a hack to make background work for ios
+
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio : 1),
+  only screen and (-webkit-min-device-pixel-ratio : 1.5)
+  {
+    height: 100%; // Part of a hack to make background work for ios
+    overflow: hidden; // Part of a hack to make background work for ios
+  }
 }
 
 body {
@@ -14,9 +19,14 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  height: 100%; // Part of a hack to make background work for ios
   line-height: $base-line-height;
-  overflow: scroll; // Part of a hack to make background work for ios
+
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio : 1),
+  only screen and (-webkit-min-device-pixel-ratio : 1.5)
+  {
+    height: 100%; // Part of a hack to make background work for ios
+    overflow: scroll; // Part of a hack to make background work for ios
+  }
 }
 
 h1,

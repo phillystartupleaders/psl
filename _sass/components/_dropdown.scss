@@ -1,5 +1,6 @@
 .dropdown {
   position: relative;
+  z-index: 1;
 
   &:hover {
     > a {
