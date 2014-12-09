@@ -33,20 +33,36 @@ footer {
     @extend %content-subtitle;
     color: white;
     margin-bottom: 0.5em;
-    margin-top: 1.5em;
   }
 
-  svg {
-    @include size(8em);
-    margin-right: 1.5em;
+  .thoughtbot-logo {
+    margin-top: 1em;
+    display: block;
+    text-align: center;
 
-    @include media($main-content-medium) {
-      float: left;
+    @include media(em(1000)) {
+      @include span-columns(6);
+    }
+
+    @include media(em(1200)) {
+      @include span-columns(5);
+      @include shift(1);
+    }
+
+    svg {
+      opacity: 0.9;
+      max-width: em(300);
+
+      @include media(max-width em(1000)) {
+        margin-top: 2em;
+      }
     }
   }
 
-  p {
-    max-width: em(600);
+  .about-thoughtbot {
+    @include media(em(1000)) {
+      @include span-columns(6);
+    }
   }
 }
 

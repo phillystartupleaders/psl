@@ -29,6 +29,15 @@
 
   h3 {
     @extend %content-subtitle;
+
+    a {
+      color: $base-font-color;
+
+      &:hover,
+      &:focus {
+        color: $base-accent-color;
+      }
+    }
   }
 
   h4 {

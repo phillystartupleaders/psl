@@ -41,7 +41,7 @@
               <li><a href="{{ site.baseurl }}/about-psl">History</a></li>
               <li><a href="{{ site.baseurl }}/manifesto">Manifesto</a></li>
               <li><a href="{{ site.baseurl }}/leadership">Leadership</a></li>
-              <li><a href="/sponsors">Sponsors</a></li>
+              <li><a href="{{ site.baseurl }}/sponsors">Sponsors</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -81,9 +81,13 @@
       <footer>
         <article class="thoughtbot">
           <h1>Site design &amp; development by</h1>
-          {% include thoughtbot.svg %}
-          <h2><a href="http://thoughtbot.com">thoughtbot</a></h2>
-          <p>Our clients hire us to design and build their products. We focus on user outcomes and simplicity. We write code for iOS, Android, and the web. <a href="http://thoughtbot.com">Learn more about thoughtbot</a></p>
+
+          <div class="about-thoughtbot">
+            <h2><a href="http://thoughtbot.com">thoughtbot</a></h2>
+            <p>Our clients hire us to design and build their products. We focus on user outcomes and simplicity. We write code for iOS, Android, and the web. <a href="http://thoughtbot.com" class="more">Learn more about thoughtbot</a></p>
+          </div>
+
+          <a href="http://thoughtbot.com" class="thoughtbot-logo">{% include thoughtbot.svg %}</a>
         </article>
 
         <section class="logo-wrapper">
