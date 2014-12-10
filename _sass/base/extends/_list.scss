@@ -7,20 +7,6 @@
     padding: 2em;
     text-align: center;
 
-    &%same-height {
-      @include media(em(600)) {
-        display: table;
-        min-height: em(335);
-      }
-
-      a {
-        @include media(em(600)) {
-          display: table-cell;
-          vertical-align: middle;
-        }
-      }
-    }
-
     @include media(min-width em(600) max-width em(899)) {
       @include omega(2n);
       @include span-columns(6);
@@ -31,6 +17,18 @@
       @include span-columns(4);
     }
 
+    &%same-height {
+      @include media(em(600)) {
+        display: table;
+      }
+
+      a {
+        @include media(em(600)) {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
     %title {
       @extend %content-subtitle;
     }

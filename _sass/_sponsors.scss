@@ -5,8 +5,12 @@
     li {
       @extend %same-height;
 
+      img {
+        max-height: em(120);
+      }
+
       @include media(em(600)) {
-        min-height: em(335);
+        min-height: em(230);
       }
     }
   }
