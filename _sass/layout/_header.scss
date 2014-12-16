@@ -43,10 +43,12 @@ $medium-header-break: em(850);
   font-size: em(15);
 
   .navigation-list {
+
     @include media($mobile-navigation) {
       @include position(absolute, null 0 null 0);
-      background-color: rgba($dark-brown, 0.9);
+      background-color: rgba($dark-brown, 0.95);
       display: none;
+      z-index: 2;
 
       li {
         display: block;
