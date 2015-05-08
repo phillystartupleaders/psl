@@ -1,6 +1,6 @@
-name: Start.Stay.Grow. Marketing Site
-url: http://startstaygrow.org
-baseurl: /psl
+name: Philly Startup Leaders Site
+url: http://phillystartupleaders.org
+baseurl:
 
 sass:
   sass_dir: _sass
