@@ -75,10 +75,12 @@
       </header>
 
       {% if page.url == '/events/' %}
+      {{ page.url }}
         <section class="main-content events-content" >
           {{ content }}
         </section>
         {% else %}
+        {{ page.url }}
         <section class="main-content" >
           {{ content }}
         </section>
