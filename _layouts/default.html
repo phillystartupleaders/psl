@@ -53,7 +53,7 @@
               <li><a href="{{ site.baseurl }}/resources">Resources</a></li>
               <li><a href="{{ site.baseurl }}/coworking">Coworking</a></li>
               <li><a href="http://nextplex.com/philadelphia-pa/resources/funding-sources" class="external">Investors</a></li>
-              <li><a href="https://www.startupdigest.com/digests/philadelphia" class="external">Philly Events</a></li>
+              <li><a href="{{ site.baseurl }}/events">Philly Events</a></li>
               <li><a href="http://technical.ly/philly/jobs/" class="external">Jobs</a></li>
               <li><a href="{{ site.baseurl }}/incubators-accelerators">Incubators &amp; Accelerators</a></li>
             </ul>
@@ -74,9 +74,15 @@
         {% endif %}
       </header>
 
-      <section class="main-content">
-        {{ content }}
-      </section>
+      {% if page.url == '/events/' %}
+        <section class="main-content events-content" >
+          {{ content }}
+        </section>
+        {% else %}
+        <section class="main-content" >
+          {{ content }}
+        </section>
+      {% endif %}
 
       <footer>
         <article class="thoughtbot">
