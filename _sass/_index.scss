@@ -79,10 +79,6 @@
     a {
       @extend %inverse-button;
     }
-
-    &:before {
-      content: "A monthly meetup for Philly founders";
-    }
   }
 }
 
