@@ -71,6 +71,16 @@
       fill: darken($base-accent-color, 20);
     }
   }
+
+  .psl-live {
+    background-color: #f4f4f4;
+    display: block;
+    margin: 0 auto;
+
+    a {
+      @extend %inverse-button;
+    }
+  }
 }
 
 .programs {
