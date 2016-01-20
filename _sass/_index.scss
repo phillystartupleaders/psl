@@ -73,12 +73,16 @@
   }
 
   .psl-live {
-    background-color: #f4f4f4;
     display: block;
     margin: 0 auto;
 
     a {
       @extend %inverse-button;
+    }
+
+    &:before {
+      content: "";
+      margin-bottom: 0;
     }
   }
 }
