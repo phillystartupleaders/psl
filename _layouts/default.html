@@ -1,42 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/style.css" type="text/css" media="all" />
-    <title>{{ page.title }}</title>
-    <script src="//use.typekit.net/myb4xsg.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-  </head>
 
-  <body>
-    <header class="main-header">
-      <h1 class="logo">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/style.css" type="text/css" media="all" />
+  <title>{{ page.title }}</title>
+  <script src="//use.typekit.net/myb4xsg.js"></script>
+  <script>
+    try {
+      Typekit.load();
+    } catch (e) {}
+  </script>
+</head>
+
+<body>
+  <header class="main-header">
+    <h1 class="logo">
         <a href="{{ site.baseurl }}/">
           <abbr>PSL</abbr>
           <span>Philly Startup Leaders</span>
         </a>
       </h1>
 
-      <nav class="main-navigation">
-        <a href="#" class="mobile-menu">
+    <nav class="main-navigation">
+      <a href="#" class="mobile-menu">
           {% include menu.svg %}
           Menu
         </a>
 
-        <ul class="navigation-list">
-          <li class="social">
-            <a href="https://twitter.com/startupleaders" class="#twitter">
+      <ul class="navigation-list">
+        <li class="social">
+          <a href="https://twitter.com/startupleaders" class="#twitter">
               {% include twitter.svg %}
               <span>Twitter</span>
             </a>
-          </li>
-          <li class="dropdown">
-            <a href="#">
+        </li>
+        <li class="dropdown">
+          <a href="#">
               About PSL
               {% include down-arrow.svg %}
             </a>
+          <ul>
+            <li><a href="{{ site.baseurl }}/about-psl">History</a></li>
+            <li><a href="{{ site.baseurl }}/manifesto">Manifesto</a></li>
+            <li><a href="{{ site.baseurl }}/leadership">Leadership</a></li>
+            <li><a href="{{ site.baseurl }}/sponsors">Sponsors</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">
+              Philly Tech Info
+              {% include down-arrow.svg %}
+            </a>
+          <ul>
+            <li><a href="http://www.phillytechguide.com/">Philly Tech Guide</a></li>
+            <li><a href="{{ site.baseurl }}/resources">Resources</a></li>
+            <li><a href="{{ site.baseurl }}/coworking">Coworking</a></li>
+            <li><a href="http://nextplex.com/philadelphia-pa/resources/funding-sources" class="external">Investors</a></li>
+            <li><a href="{{ site.baseurl }}/events">Philly Events</a></li>
+            <li><a href="http://technical.ly/philly/jobs/" class="external">Jobs</a></li>
+            <li><a href="{{ site.baseurl }}/incubators-accelerators">Incubators &amp; Accelerators</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://groups.google.com/forum/#!forum/talk-psl">Listserv</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="wrapper">
+    <header class="hero">
+      <h1><span>{{ page.title }}</span></h1> {% if page.sub-title %}
+      <h2>{{ page.sub-title }}</h2> {% endif %}
+    </header>
+
+    {% assign url = page.url|remove:'index.html' %} {% if url == '/events/' %}
+    <section class="main-content events-content">
+      {{ content }}
+    </section>
+    {% else %}
+    <section class="main-content">
+      {{ content }}
+    </section>
+    {% endif %}
+
+    <footer>
+      <article class="thoughtbot">
+        <h1>Site design &amp; development by</h1>
+
+        <div class="about-thoughtbot">
+          <h2><a href="http://thoughtbot.com">thoughtbot</a></h2>
+          <p>Our clients hire us to design and build their products. We focus on user outcomes and simplicity. We write code for iOS, Android, and the web. <a href="http://thoughtbot.com" class="more">Learn more about thoughtbot</a></p>
+        </div>
+
+        <a href="http://thoughtbot.com" class="thoughtbot-logo">{% include thoughtbot.svg %}</a>
+      </article>
+
+      <section class="logo-wrapper">
+        <h1 class="logo">
+            <a href="{{ site.baseurl }}/">
+              <abbr class="short">PSL</abbr>
+              <span class="full">Philly Startup Leaders</span>
+            </a>
+          </h1>
+
+        <p>This site and its code are open source and licensed under MIT license. <a href="https://github.com/thoughtbot/psl">View the source</a>.</p>
+      </section>
+
+      <nav class="footer-navigation">
+        <ul>
+          <li class="group">
+            <h3>About PSL</h3>
             <ul>
               <li><a href="{{ site.baseurl }}/about-psl">History</a></li>
               <li><a href="{{ site.baseurl }}/manifesto">Manifesto</a></li>
@@ -44,127 +121,58 @@
               <li><a href="{{ site.baseurl }}/sponsors">Sponsors</a></li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a href="#">
-              Philly Tech Info
-              {% include down-arrow.svg %}
-            </a>
+
+          <li class="group">
+            <h3>Philly Tech Info</h3>
             <ul>
-              <li><a href="http://www.phillytechguide.com/">Philly Tech Guide</a></li>
               <li><a href="{{ site.baseurl }}/resources">Resources</a></li>
               <li><a href="{{ site.baseurl }}/coworking">Coworking</a></li>
               <li><a href="http://nextplex.com/philadelphia-pa/resources/funding-sources" class="external">Investors</a></li>
-              <li><a href="{{ site.baseurl }}/events">Philly Events</a></li>
+              <li><a href="https://www.startupdigest.com/digests/philadelphia" class="external">Philly Events</a></li>
               <li><a href="http://technical.ly/philly/jobs/" class="external">Jobs</a></li>
               <li><a href="{{ site.baseurl }}/incubators-accelerators">Incubators &amp; Accelerators</a></li>
             </ul>
           </li>
-          <li>
-            <a href="https://groups.google.com/forum/#!forum/talk-psl">Listserv</a>
+
+          <li class="group">
+            <h3>Get in Contact</h3>
+            <ul>
+              <li>
+                <a href="https://groups.google.com/forum/#!forum/talk-psl">Listserv</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/startupleaders">Twitter</a>
+              </li>
+              <li>
+                <a href="mailto:engage@phillystartupleaders.org">Email Us</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
-    </header>
+    </footer>
+  </section>
 
-    <section class="wrapper">
-      <header class="hero">
-        <h1><span>{{ page.title }}</span></h1>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/javascript/site.js"></script>
 
-        {% if page.sub-title %}
-          <h2>{{ page.sub-title }}</h2>
-        {% endif %}
-      </header>
+  <!-- Google Analytics -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      {% assign url = page.url|remove:'index.html' %}
-      {% if url == '/events/' %}
-        <section class="main-content events-content" >
-          {{ content }}
-        </section>
-        {% else %}
-        <section class="main-content" >
-          {{ content }}
-        </section>
-      {% endif %}
+    ga('create', 'UA-101267610-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
 
-      <footer>
-        <article class="thoughtbot">
-          <h1>Site design &amp; development by</h1>
-
-          <div class="about-thoughtbot">
-            <h2><a href="http://thoughtbot.com">thoughtbot</a></h2>
-            <p>Our clients hire us to design and build their products. We focus on user outcomes and simplicity. We write code for iOS, Android, and the web. <a href="http://thoughtbot.com" class="more">Learn more about thoughtbot</a></p>
-          </div>
-
-          <a href="http://thoughtbot.com" class="thoughtbot-logo">{% include thoughtbot.svg %}</a>
-        </article>
-
-        <section class="logo-wrapper">
-          <h1 class="logo">
-            <a href="{{ site.baseurl }}/">
-              <abbr class="short">PSL</abbr>
-              <span class="full">Philly Startup Leaders</span>
-            </a>
-          </h1>
-
-          <p>This site and its code are open source and licensed under MIT license. <a href="https://github.com/thoughtbot/psl">View the source</a>.</p>
-        </section>
-
-        <nav class="footer-navigation">
-          <ul>
-            <li class="group">
-              <h3>About PSL</h3>
-              <ul>
-                <li><a href="{{ site.baseurl }}/about-psl">History</a></li>
-                <li><a href="{{ site.baseurl }}/manifesto">Manifesto</a></li>
-                <li><a href="{{ site.baseurl }}/leadership">Leadership</a></li>
-                <li><a href="{{ site.baseurl }}/sponsors">Sponsors</a></li>
-              </ul>
-            </li>
-
-            <li class="group">
-              <h3>Philly Tech Info</h3>
-              <ul>
-                <li><a href="{{ site.baseurl }}/resources">Resources</a></li>
-                <li><a href="{{ site.baseurl }}/coworking">Coworking</a></li>
-                <li><a href="http://nextplex.com/philadelphia-pa/resources/funding-sources" class="external">Investors</a></li>
-                <li><a href="https://www.startupdigest.com/digests/philadelphia" class="external">Philly Events</a></li>
-                <li><a href="http://technical.ly/philly/jobs/" class="external">Jobs</a></li>
-                <li><a href="{{ site.baseurl }}/incubators-accelerators">Incubators &amp; Accelerators</a></li>
-              </ul>
-            </li>
-
-            <li class="group">
-              <h3>Get in Contact</h3>
-              <ul>
-                <li>
-                  <a href="https://groups.google.com/forum/#!forum/talk-psl">Listserv</a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/startupleaders">Twitter</a>
-                </li>
-                <li>
-                  <a href="mailto:engage@phillystartupleaders.org">Email Us</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </footer>
-    </section>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}/javascript/site.js"></script>
-
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)
-        },i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-              ga('create', 'UA-57662132-1', 'auto');
-                ga('send', 'pageview');
-              </script>
-  </body>
 </html>
